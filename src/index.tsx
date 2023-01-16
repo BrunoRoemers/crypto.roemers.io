@@ -3,14 +3,31 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './routes/Home';
-import Error from './components/Error';
+import Template from "./components/Template";
+import Error from "./components/Error";
+import AccountingHome from "./routes/accounting/Home";
+import Home from "./routes/Home";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home/>,
-    errorElement: <Error/>,
+    path: "/",
+    element: <Template />,
+    errorElement: (
+      <Template>
+        <Error />
+      </Template>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Home />,
+        errorElement: <Error />,
+      },
+      {
+        path: "accounting",
+        element: <AccountingHome />,
+      },
+    ],
   },
 ]);
 
