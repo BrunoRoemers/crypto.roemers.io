@@ -16,8 +16,8 @@ const FormRow = ({ label, errorMessages, children, htmlFor }: Props) => {
       <div>{children}</div>
       {!hasErrors ? null : (
         <ul className="text-red-600">
-          {errorMessages.map((errorMessage) => (
-            <li>{errorMessage}</li>
+          {errorMessages.map((errorMessage, i) => (
+            <li key={1}>{errorMessage}</li>
           ))}
         </ul>
       )}
@@ -31,7 +31,7 @@ const FormRow = ({ label, errorMessages, children, htmlFor }: Props) => {
     //       they are implicitly linked (no need for htmlFor and id).
     //       However, the user of this component can provide an explicit htmlFor in case of conflict.
     <label className={wrapperClx} htmlFor={htmlFor}>
-      <div className="w-1/3">{label}</div>
+      <div className="w-1/3 pt-1">{label}</div>
       <div className="w-2/3">{content}</div>
     </label>
   ) : (
