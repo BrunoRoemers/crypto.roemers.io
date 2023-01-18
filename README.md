@@ -21,9 +21,12 @@ I do not give a damn about the looks of this site, as long as it's usable.
 ### Nice-to-haves
 - export and import data from local storage
 - consider: if not all page state is reflected in the url, how can folks easily share their progress?
+- connect wallet (for convenience) instead of copy-paste address
+- ENS support
 
 ### Distant future
 - backup data from local storage to Google Drive, iCloud, Dropbox... (encrypted?!)
+- add support for Open Collective (not a blockchain, but it would be good to have all our transaction ledgers in one place)
 
 ## Cheat Sheet
 - `npm start`

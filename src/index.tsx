@@ -5,7 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Template from "./components/Template";
 import Error from "./components/Error";
-import AccountingHome from "./routes/accounting/Home";
+import AccountingHome, {
+  loader as accountingHomeLoader,
+} from "./routes/accounting/Home";
 import Home from "./routes/Home";
 
 const router = createBrowserRouter([
@@ -26,6 +28,7 @@ const router = createBrowserRouter([
       {
         path: "accounting",
         element: <AccountingHome />,
+        loader: accountingHomeLoader,
       },
     ],
   },
