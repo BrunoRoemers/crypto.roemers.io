@@ -9,6 +9,7 @@ import AccountingHome, {
   loader as accountingHomeLoader,
 } from "./routes/accounting/Home";
 import Home from "./routes/Home";
+import StorageHome from "./routes/storage/Home";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: "accounting",
         element: <AccountingHome />,
         loader: accountingHomeLoader,
+      },
+      {
+        path: "storage",
+        element: <StorageHome />,
       },
     ],
   },

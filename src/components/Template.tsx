@@ -28,11 +28,14 @@ const Template = ({ children }: TemplateProps) => {
         <h1 className="mr-1">
           <HeaderLink to="/">Crypto Tools</HeaderLink>:
         </h1>
-        <ul className="flex gap-x-1">
+        <ul className="grow flex gap-x-1">
           <li>
             <HeaderLink to="/accounting">Accounting</HeaderLink>
           </li>
         </ul>
+        <div>
+          (<HeaderLink to="/storage">Storage</HeaderLink>)
+        </div>
       </header>
       <main>{children ? children : <Outlet />}</main>
     </>
